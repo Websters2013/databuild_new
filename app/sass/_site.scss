@@ -213,41 +213,99 @@
     }
   }
   &__footer {
-    padding: 35px 0 15px;
+    padding: 40px 0 4px;
     background: $footer-bg;
     text-align: center;
 
-
     &-layout {
       position: relative;
-      max-width: 1130px;
+      max-width: 1470px;
       padding: 0 15px;
       @include blockCentered();
     }
   }
   &__footer-top {
+    margin-bottom: 30px;
+  }
+  &__footer-contacts-item {
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto 15px;
+    text-align: center;
 
+    > div {
+      position: relative;
+      height: 32px;
+      margin-bottom: 13px;
+
+      svg {
+        @include absoluteCenter();
+        height: 25px;
+        width: auto;
+
+        path {
+          fill: $main-red-color;
+        }
+      }
+    }
+    > span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $main-white-color;
+    }
+    address,
+    a {
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      font-size: 14px;
+      line-height: 20px;
+      color: $main-white-color;
+      white-space: pre-line;
+      @include main-font3();
+      @include transition(border-color, $animation-time, 0);
+    }
+    a {
+      white-space: normal;
+    }
+  }
+  &__footer-menu {
+    text-align: center;
+  }
+  &__footer-menu-item {
+    text-align: center;
+    margin-bottom: 10px;
+
+    > a {
+      font-size: 14px;
+      color: $main-white-color;
+      @include main-font3();
+      @include transition(color, $animation-time, 0);
+
+      &:hover {
+        color: $main-red-color;
+      }
+    }
   }
   &__footer-bottom {
     position: relative;
-    font-size: 13px;
+    padding: 15px 0 0;
+    border-top: 1px solid #9ba9b0;
+    font-size: 14px;
     line-height: 18px;
-    color: #747474;
+    color: #d0d5d7;
+    letter-spacing: -0.5px;
     text-align: center;
 
     span {
       display: block;
-      padding: 0 20px;
       margin-bottom: 10px;
     }
     a {
       display: inline-block;
       color: $main-white-color;
       @include transition(color, $animation-time, 0);
-
-      &:hover {
-        color: #747474;
-      }
     }
   }
   &__centered {
@@ -307,8 +365,34 @@
     }
   }
 }
-@media (min-width: $tablet-landscape) {
+@media (min-width: $tablet-portrait) {
 
+  .site {
+
+    &__footer-top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__footer-contacts {
+      display: flex;
+      justify-content: space-between;
+      width: 74%;
+    }
+    &__footer-contacts-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 33%;
+      margin-bottom: 0;
+    }
+    &__footer-menu {
+      width: 21.7%;
+      text-align: center;
+    }
+    &__footer-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 @media (min-width: $desktop) {
   .site {
@@ -412,48 +496,61 @@
       bottom: 0;
       left: 0;
       height: 393px;
-      padding: 148px 0 116px;
+      padding-top: 78px;
     }
     &__footer-top {
-      margin-bottom: 135px;
-      white-space: nowrap;
+      margin-bottom: 62px;
+    }
+    &__footer-contacts-item {
 
       > div {
-        white-space: normal;
-        font-size: 18px;
-        line-height: 28px;
-        margin-bottom: 0;
+        margin-bottom: 13px;
 
-        &:nth-child(1) {
-          width: 330px;
-          margin-right: 53px;
-        }
-        &:nth-child(2) {
-          width: 470px;
-          margin-right: 87px;
-          line-height: 24px;
-          letter-spacing: -0.4px;
-          padding-top: 3px;
-        }
-        &:nth-child(3) {
-          width: auto;
-          padding-top: 7px;
-          text-align: right;
+        svg {
+          height: 32px;
         }
       }
+      > span {
+        margin-bottom: 21px;
+        font-size: 14px;
+      }
+      address,
+      a {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      a {
 
+        &:hover{
+
+          &.mail {
+            border-color: $main-white-color;
+          }
+        }
+      }
     }
-    &__footer-logo {
-      @include absoluteCenter();
-      width: 193px;
-      height: auto;
-      margin-top: -30px;
-      margin-left: 24px;
+    &__footer-menu-item {
+      margin-bottom: 13.8px;
+
+      > a {
+        font-size: 18px;
+
+        &:hover {
+          color: $main-red-color;
+        }
+      }
     }
     &__footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 -37px 0 -14px;
+      padding: 38px 0 26px;
+      font-size: 17px;
+      line-height: 18px;
+
+      a {
+
+        &:hover {
+          color: #d0d5d7;
+        }
+      }
     }
   }
 }
