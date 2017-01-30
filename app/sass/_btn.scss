@@ -1,0 +1,39 @@
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  border: none;
+  border-radius: 45px;
+  background: $main-white-color;
+  box-shadow: 0 5px 10px 0 rgba(44, 49, 65, 0.09);
+  line-height: 34px;
+  font-size: 12px;
+  color: $main-red-color;
+  text-transform: uppercase;
+  @include main-font5();
+  @include transition(all, $animation-time, .05);
+
+  &_2 {
+    background: #28c776;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .btn {
+    padding: 0 25px;
+    line-height: 45px;
+    font-size: 15px;
+
+    &:hover {
+      background: $main-red-color;
+      color: $main-white-color;
+    }
+  }
+}

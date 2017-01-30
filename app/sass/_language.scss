@@ -1,0 +1,102 @@
+
+.language {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 11px;
+  right: 50px;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include main-font4();
+
+  &:after {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: $main-red-color transparent transparent transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    @include transition(transform, $animation-time, 0);
+    content: '';
+  }
+  &.active {
+
+    &:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  a{
+    overflow: hidden;
+    display: block;
+    padding: 1px 5px;
+    color: $language-color;
+    @include transition(color, $animation-time, 0);
+
+    svg {
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      margin-right: 9px;
+    }
+  }
+  &__active {
+    position: relative;
+    display: block;
+    padding: 0 21px 0 0;
+  }
+  &__dropdown {
+    display: none;
+    position: relative;
+    top: 5px;
+    background: $main-white-color;
+
+    a {
+      opacity: .8;
+      margin-bottom: 3px;
+      color: $language-dropdown-color;
+      @include transition(opacity, $animation-time, 0);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .language {
+    top: 29px;
+    right: 65px;
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .language {
+    top: 53px;
+    right: 12px;
+    background: transparent;
+  }
+}
+@media (min-width: $desktop-wide) {
+
+}

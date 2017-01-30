@@ -1,0 +1,43 @@
+.logo {
+  position: absolute;
+  z-index: 3;
+  top: 6px;
+  left: 15px;
+  width: 46px;
+
+  img,
+  svg {
+    width: 100%;
+    height: auto;
+
+    path,
+    line {
+      @include transition(all, $animation-time, 0)
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .logo {
+    top: 10px;
+    width: 80px;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .logo {
+    top: 38px;
+    left: 15px;
+    //width: 194px;
+  }
+
+}
