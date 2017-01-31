@@ -8,6 +8,14 @@
   @include main-font1();
   color: $main-text-color;
 
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    color: $main-black-color;
+    @include main-font4();
+  }
   &__header {
     position: relative;
     z-index: 4;
@@ -139,15 +147,6 @@
     background-position: center;
     text-align: center;
   }
-  //&__hero-video {
-  //  position: absolute;
-  //  min-height: 100%;
-  //  min-width: 100%;
-  //  left: 50%;
-  //  top: 50%;
-  //  -webkit-transform: translate(-50%, -50%);
-  //  transform: translate(-50%, -50%);
-  //}
   &__hero-title {
     margin-bottom: 6px;
     font-size: 28px;
@@ -344,7 +343,7 @@
       }
     }
     &__hero {
-      padding: 14.45% 15px 8.45%;
+      padding: 12.05% 15px 7.05%;
     }
     &__hero-title {
       font-size: 40px;
@@ -363,12 +362,6 @@
       width: 36px;
       height: 36px;
     }
-  }
-}
-@media (min-width: $tablet-portrait) {
-
-  .site {
-
     &__footer-top {
       display: flex;
       justify-content: space-between;
@@ -381,8 +374,8 @@
     &__footer-contacts-item {
       display: inline-block;
       vertical-align: top;
-      width: 33%;
-      margin-bottom: 0;
+      width: 29.7%;
+      margin: 0;
     }
     &__footer-menu {
       width: 21.7%;
@@ -394,6 +387,9 @@
     }
   }
 }
+@media (min-width: $tablet-landscape) {
+
+}
 @media (min-width: $desktop) {
   .site {
 
@@ -403,6 +399,11 @@
       height: 393px;
       clear: both;
       content: '';
+    }
+
+    &__title {
+      margin-bottom: 73px;
+      font-size: 42px;
     }
     &__header {
       height: 136px;
@@ -460,7 +461,7 @@
           -webkit-transform: translateY(100%);
           transform: translateY(100%);
         }
-        &:hover,
+
         span {
           position: relative;
           z-index: 2;
@@ -475,7 +476,6 @@
           }
 
           opacity: 1;
-          background: $main-red-color;
           color: $main-white-color;
         }
       }
@@ -536,7 +536,7 @@
         font-size: 18px;
 
         &:hover {
-          color: $main-red-color;
+          color: #d0d5d7;
         }
       }
     }

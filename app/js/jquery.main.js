@@ -35,6 +35,7 @@
 
                         if( $( this ).parent().hasClass( 'language__active' ) ) {
 
+                            _obj.trigger('mouseenter');
                             e.preventDefault();
 
                         }

@@ -22,7 +22,8 @@
             _contents = _obj.find( '.popup__content' ),
             _scrollConteiner = $( 'html' ),
             _window = $( window ),
-            _timer = setTimeout( function(){}, 1 );
+            _timer = setTimeout( function(){}, 1 ),
+            _videoPopup = $( '.popup__video' );
 
         //private methods
         var _centerWrap = function(){
@@ -31,6 +32,11 @@
                 } else {
                     _wrap.css( { top: 0 } );
                 }
+            },
+            _addVideoFrame = function ( url ) {
+
+                _videoPopup.append( '<iframe src="'+url+'" frameborder="0" allowfullscreen></iframe>' )
+
             },
             _getScrollWidth = function (){
                 var scrollDiv = document.createElement( 'div'),
@@ -47,6 +53,7 @@
                 return scrollBarWidth;
             },
             _hide = function(){
+
                 _obj.css( {
                     overflowY: 'hidden'
                 } );
@@ -67,6 +74,8 @@
                     _obj.removeClass( 'popup_hide' );
                 }, 300 );
 
+                _videoPopup.find('iframe').remove()
+
             },
             _init = function(){
                 _obj[ 0 ].obj = _self;
@@ -82,6 +91,12 @@
                     click: function(){
 
                         _show( $( this ).attr( 'data-popup' ) );
+
+                        if ( $( this ).hasClass('site__hero-play') ) {
+
+                            _addVideoFrame( $( this ).attr( 'data-video' ) )
+
+                        }
 
                         return false;
                     }
