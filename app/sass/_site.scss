@@ -237,6 +237,13 @@
     padding: 40px 15px;
     text-align: center;
     color: $main-black-color;
+
+    &_projects {
+
+      .site__hero-inner-title {
+        margin-bottom: 2px;
+      }
+    }
   }
   &__hero-inner-title {
     margin-bottom: 22px;
@@ -251,6 +258,10 @@
     line-height: 22px;
     @include main-font3();
     font-style: italic;
+
+    &_2 {
+      font-style: normal;
+    }
   }
 
   &__footer {
@@ -477,7 +488,7 @@
       position: relative;
       display: flex;
       justify-content: center;
-      left: 16px;
+      left: 13px;
       height: auto;
       max-width: 690px;
       margin: 0 auto;
@@ -554,6 +565,11 @@
 
     &__hero-inner {
       padding: 112px 15px 103px;
+
+      &_projects {
+
+        padding: 112px 15px 110px;
+      }
     }
     &__hero-inner-title {
       font-size: 48px;

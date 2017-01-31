@@ -1,19 +1,21 @@
 
 .shops {
+  padding: 40px 0;
 
+  .site__title {
+    margin-bottom: 30px;
+  }
   &__row {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #f1f4f6;
-
-    &:last-child {
-      border-bottom: none;
-    }
+    flex-flow: row wrap;
   }
   &__item {
     position: relative;
-    width: 16.66%;
-    height: 137px;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    height: 85px;
 
     img {
       @include absoluteCenter();
@@ -24,18 +26,44 @@
 
 @media (min-width: $tablet-portrait) {
 
+  .shops {
 
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #f1f4f6;
+      margin-bottom: -2px;
 
-}
-
-@media (min-width: $tablet-landscape) {
-
-
+      &:last-child {
+        border-bottom: none;
+        margin: 0;
+      }
+    }
+    &__item {
+      width: 13.26%;
+      height: 143px;
+    }
+  }
 
 }
 
 @media (min-width: $desktop) {
 
+  .shops {
+    padding: 40px 0;
+    margin-bottom: 33px;
 
+    .site__title {
+      margin-bottom: 70px;
+    }
+    &__item {
+      @include transition(transform, $animation-time, 0);
 
+      &:hover {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+
+      }
+    }
+  }
 }

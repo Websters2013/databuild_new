@@ -1,52 +1,87 @@
 
 .location {
+  padding-top: 22px;
 
   &__head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-
-    .btn {
-
-    }
+    margin-bottom: 30px;
   }
   &__title {
-    max-width: 50%;
-    font-size: 36px;
+    margin-bottom: 20px;
+    font-size: 28px;
     color: $main-black-color;
     @include main-font4();
   }
   &__wrap {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 22px;
   }
   &__map {
-    width: 48%;
-    height: 376px;
+    width: 100%;
+    padding-bottom: 60%;
     border: 2px solid #f1f4f6;
   }
   &__plan {
-    width: 48%;
 
     img {
-      width: 100%;
+      @include blockCentered();
+      max-width: 100%;
     }
   }
 }
 
 @media (min-width: $tablet-portrait) {
 
+  .location {
+    padding-top: 22px;
 
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    &__title {
+      max-width: 50%;
+    }
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &__map {
+      width: 48%;
+      padding-bottom: 40%;
+    }
+    &__plan {
+      width: 48%;
 
-}
-
-@media (min-width: $tablet-landscape) {
-
-
-
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (min-width: $desktop) {
 
+  .location {
 
+    &__head {
+      margin-bottom: 69px;
+
+      .btn {
+        position: relative;
+        top: -12px;
+      }
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__wrap {
+      margin-bottom: 78px;
+    }
+    &__map {
+      height: 378px;
+      padding-bottom: 0;
+    }
+  }
 }

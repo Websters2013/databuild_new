@@ -1,17 +1,18 @@
 
 .back-to-list {
   position: absolute;
-  left: 15px;
+  left: 0;
+  top:-25px;
   display: inline-block;
-  padding-left: 22px;
-  font-size: 18px;
+  padding-left: 25px;
+  font-size: 14px;
   color: $main-black-color;
 
   svg {
     position: absolute;
     top: 0;
     left: 0;
-    height: 16px;
+    height: 14px;
     width: auto;
 
     path {
@@ -22,7 +23,25 @@
 
 @media (min-width: $tablet-portrait) {
 
+  .back-to-list {
+    left: 11px;
+    top: 5px;
+    padding-left: 25px;
+    font-size: 18px;
 
+    svg {
+      height: 18px;
+      @include transition( transform, $animation-time, 0 );
+    }
+
+    &:hover {
+
+      svg {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+      }
+    }
+  }
 
 }
 
@@ -34,6 +53,26 @@
 
 @media (min-width: $desktop) {
 
+  .back-to-list {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    display: inline-block;
+    padding-left: 25px;
+    font-size: 18px;
+    color: $main-black-color;
 
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: auto;
+
+      path {
+        fill: $main-red-color;
+      }
+    }
+  }
 
 }
