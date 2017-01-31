@@ -1,0 +1,143 @@
+
+.about-us {
+
+  &__info {
+    margin-bottom: 40px;
+
+    .site__title {
+      text-align: left;
+    }
+  }
+  &__info-text {
+    width: 100%;
+    max-width: 565px;
+    @include main-font3();
+
+    p {
+      margin-bottom: 30px;
+      font-size: 19px;
+      line-height: 27px;
+    }
+    span {
+      display: block;
+      margin-bottom: 22px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+  &__info-pic {
+    @include blockCentered();
+    width: 100%;
+    max-width: 690px;
+  }
+  &__team {
+    padding: 40px 0 7px;
+    border-top: 2px solid #f1f4f6;
+  }
+  &__team-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  &__team-item {
+    overflow: hidden;
+    width: 190px;
+    margin: 0 15px 15px;
+  }
+  &__team-pic {
+    height: 215px;
+    margin-bottom: 21px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    backface-visibility: hidden;
+  }
+  &__team-name {
+    font-size: 14px;
+    line-height: 20px;
+    color: $main-black-color;
+
+    strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 20px;
+      @include main-font4();
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .about-us {
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &__info-text {
+      width: 48%;
+    }
+    &__info-pic {
+      width: 48%;
+      margin: 55px 0 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .about-us {
+
+    &__info {
+      margin-bottom: 78px;
+    }
+    &__info-text {
+      width: 100%;
+
+      p {
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+      span {
+        margin-bottom: 32px;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+    &__info-pic {
+      margin: 75px 0 0;
+    }
+    &__team {
+      padding: 111px 0 80px;
+    }
+    &__team-item {
+      margin: 0 30px 33px;
+
+      &:hover {
+
+        .about-us__team-pic {
+          background-size: 105% 105%;
+        }
+      }
+    }
+    &__team-pic {
+      @include transition(background, $animation-time, .1)
+    }
+    &__team-name {
+      font-size: 16px;
+      line-height: 24px;
+
+      strong {
+        font-size: 24px;
+      }
+    }
+  }
+}
