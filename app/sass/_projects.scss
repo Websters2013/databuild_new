@@ -1,0 +1,87 @@
+
+.projects {
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__gallery {
+    width: 60%;
+
+    .swiper-wrapper {
+
+    }
+    .swiper-slide {
+
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: none;
+
+      svg {
+        height: 32px;
+        width: auto;
+
+        path {
+          fill: $main-white-color;
+        }
+      }
+    }
+  }
+  &__info {
+    width: 40%;
+    padding-left: 60px;
+    color: $main-black-color;
+
+    p {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__info-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1;
+    @include main-font4();
+  }
+  &__info-list {
+    margin-bottom: 30px;
+
+    li {
+
+    }
+    i {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      height: 32px;
+      width: 32px;
+      margin-right: 15px;
+    }
+    svg {
+      @include absoluteCenter();
+      height: 32px;
+      width: auto;
+
+      path {
+        fill: $main-red-color;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+}

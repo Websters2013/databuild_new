@@ -1,0 +1,41 @@
+
+.shops {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f1f4f6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 16.66%;
+    height: 137px;
+
+    img {
+      @include absoluteCenter();
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+
+
+}

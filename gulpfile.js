@@ -21,8 +21,21 @@ var paths = {
             dist: 'index.min.js',
             contains: [
                 'app/js/jquery.main.js',
-                'app/js/jquery.popup.js',
-                'app/js/jquery.animation.js'
+                'app/js/jquery.popup.js'
+            ]
+        },
+        {
+            dist: 'about-us.min.js',
+            contains: [
+                'app/js/jquery.main.js'
+            ]
+        },
+        {
+            dist: 'projects-single.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.projects.js',
+                'app/js/jquery.map.js'
             ]
         }
     ],

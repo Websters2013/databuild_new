@@ -1,0 +1,39 @@
+
+.back-to-list {
+  position: absolute;
+  left: 15px;
+  display: inline-block;
+  padding-left: 22px;
+  font-size: 18px;
+  color: $main-black-color;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: auto;
+
+    path {
+      fill: $main-red-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+
+
+}

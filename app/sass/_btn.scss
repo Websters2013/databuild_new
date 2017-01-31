@@ -18,6 +18,20 @@
     position: relative;
     z-index: 2;
   }
+
+  &_2 {
+    color: #424242;
+    border-color: #424242;
+
+    svg {
+      height: 32px;
+      width: auto;
+
+      path {
+        fill: #424242;
+      }
+    }
+  }
 }
 
 @media (min-width: $tablet-portrait) {
@@ -63,6 +77,20 @@
       &:after {
         opacity: 1;
         right: -2px;
+      }
+      svg {
+
+        path {
+          fill: $main-white-color;
+        }
+      }
+    }
+
+    &_2 {
+
+      &:before,
+      &:after {
+        background: #424242;
       }
     }
   }
