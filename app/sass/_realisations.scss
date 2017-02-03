@@ -1,0 +1,40 @@
+
+.realisations {
+
+  .production {
+    border-top: 0;
+    border-bottom: 2px solid #f1f4f6;
+  }
+  .production__list {
+    margin-bottom: 1px;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .realisations {
+
+    .production {
+      padding-top: 60px;
+      padding-bottom: 57px;
+      border-top: 0;
+    }
+    .production__item {
+      margin-bottom: 59px;
+    }
+    .call-to-action {
+      min-height: 222px;
+      padding: 0 3px 2px;
+
+      .btn {
+        top: 1px;
+        right: -4px;
+      }
+    }
+  }
+}

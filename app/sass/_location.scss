@@ -50,6 +50,12 @@
     &__map {
       width: 48%;
       padding-bottom: 40%;
+
+      &_realisation {
+        width: 100%;
+        height: 378px;
+        padding-bottom: 0;
+      }
     }
     &__plan {
       width: 48%;

@@ -37,6 +37,21 @@ var paths = {
                 'app/js/jquery.projects.js',
                 'app/js/jquery.map.js'
             ]
+        },
+        {
+            dist: 'realisations-single.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.projects.js',
+                'app/js/jquery.map.js'
+            ]
+        },
+        {
+            dist: 'realisations.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.more-projects.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',
