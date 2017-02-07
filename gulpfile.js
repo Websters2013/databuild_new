@@ -52,6 +52,12 @@ var paths = {
                 'app/js/jquery.main.js',
                 'app/js/jquery.more-projects.js'
             ]
+        },
+        {
+            dist: 'contact-us.min.js',
+            contains: [
+                'app/js/jquery.main.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',
