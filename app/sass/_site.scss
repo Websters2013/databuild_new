@@ -49,8 +49,6 @@
     }
   }
   &__menu {
-    opacity: 0;
-    visibility: hidden;
     position: fixed;
     z-index: 10;
     top: 0;
@@ -59,14 +57,16 @@
     left: 0;
     height: 100%;
     padding: 80px 20px;
-    background: rgba(255,255,255, .9);
+    background: rgba(255,255,255, .95);
     line-height: 1;
     text-align: right;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
     @include transition(all, $animation-time, 0);
 
     &.opened {
-      opacity: 1;
-      visibility: visible;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
 
     &-item {
@@ -80,7 +80,7 @@
       @include main-font5();
 
       &.active {
-        opacity: .6;
+        color: $main-black-color;
         cursor: default;
       }
     }
@@ -151,7 +151,7 @@
 
         &:before,
         &:after {
-          //background: $header-menu-btn-opened;
+          background: $main-black-color;
           transition-delay: 0.001s, 0.3s;
         }
       }
@@ -486,8 +486,6 @@
       @include transition(all, $animation-time, 0);
     }
     &__menu {
-      opacity: 1;
-      visibility: visible;
       position: relative;
       display: flex;
       justify-content: center;
@@ -498,6 +496,8 @@
       padding: 0 0;
       text-align: center;
       background: transparent;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
 
       .site__menu-item {
         overflow: hidden;
@@ -517,42 +517,30 @@
         &:last-child {
           margin-right: 0;
         }
-        &:before,
-        &:after {
+        &:before {
           position: absolute;
+          top: 0;
           left: 0;
           right: 0;
-          height: 50%;
+          height: 100%;
           background: $main-red-color;
-          @include transition(transform, $animation-time, .1);
-          content: '';
-        }
-        &:before {
-          top: 0;
           -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+          @include transition(transform, $animation-time, .05);
+          content: '';
         }
-        &:after {
-          bottom: 0;
-          -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-        }
-
         span {
           position: relative;
           z-index: 2;
         }
         &.active,
         &:hover {
+          color: $main-white-color;
 
-          &:before,
-          &:after {
+          &:before {
             -webkit-transform: translateY(0);
             transform: translateY(0);
           }
-
-          opacity: 1;
-          color: $main-white-color;
         }
       }
     }

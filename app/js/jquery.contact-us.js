@@ -35,7 +35,10 @@
                     pagination: _obj.find( '.swiper-pagination' ),
                     paginationClickable: true,
                     slidesPerView: 'auto',
-                    centeredSlides: true
+                    centeredSlides: true,
+                    loop: true,
+                    autoplay: 4000,
+                    autoplayDisableOnInteraction: true
                 });
             },
             _init = function () {

@@ -103,6 +103,7 @@
         //private properties
         var _self = this,
             _menu = obj,
+            _hammer = null,
             _body = $( 'body' ),
             _window = $( window ),
             _showBtn = $( '.site__menu-btn' );
@@ -130,6 +131,19 @@
 
                     }
                 } );
+                _hammer.on("panright", function(){
+
+                    if( _menu.hasClass( 'opened' ) ) {
+
+                        _showBtn.removeClass( 'opened' );
+                        _menu.removeClass( 'opened' );
+
+                        _body.css( {
+                            'overflow': 'visible'
+                        } );
+
+                    }
+                });
 
             },
             _checkScroll = function () {
@@ -185,8 +199,16 @@
                 } );
 
             },
+            _initHammer = function(){
+
+                _hammer = new Hammer.Manager(_menu[0]);
+                _hammer.add( new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }) );
+                delete Hammer.defaults.cssProps.userSelect;
+
+            },
             _init = function() {
                 _menu[ 0 ].obj = _self;
+                _initHammer();
                 _onEvents();
             };
 
