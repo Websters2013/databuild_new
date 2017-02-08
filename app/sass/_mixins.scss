@@ -10,7 +10,7 @@
   font-style: normal;
 }
 @mixin main-font3() {
-  font-family: "suisse-light", sans-serif;
+  font-family: "suisse-light", sans-serif !important;
   font-weight: 400;
   font-style: normal;
 }

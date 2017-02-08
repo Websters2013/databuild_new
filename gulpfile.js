@@ -56,7 +56,9 @@ var paths = {
         {
             dist: 'contact-us.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.contact-us.js',
+                'app/js/jquery.form.validator.js'
             ]
         }
     ],
@@ -65,8 +67,7 @@ var paths = {
     images: 'app/img/**/*',
     pictures: 'app/pic/**/*',
     php: 'app/php/**/*',
-    fonts: 'app/fonts/**/*',
-    video: 'app/video/**/*'
+    fonts: 'app/fonts/**/*'
 };
 
 
@@ -103,12 +104,6 @@ gulp.task('fonts', function () {
     return gulp.src(paths.fonts, {
         base: 'app/fonts'
     }).pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('video', function () {
-    return gulp.src(paths.video, {
-        base: 'app/video'
-    }).pipe(gulp.dest('dist/video'));
 });
 
 gulp.task('php', function () {
@@ -164,7 +159,7 @@ gulp.task('watch', function() {
 });
 
 function serve() {
-    return run('styles', 'video', 'scripts', 'vendorScripts', 'vendorStyles', 'php', 'fonts',  'images', 'pictures', 'views', 'serve');
+    return run( 'styles',  'scripts', 'vendorScripts', 'vendorStyles', 'php', 'fonts',  'images', 'pictures', 'views', 'serve');
 }
 
 gulp.task('default', ['clean'], serve());

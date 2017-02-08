@@ -175,6 +175,15 @@
                     <!--contact-us__map-->
                     <div class="contact-us__map">
 
+                        <!--contact-us__map-container-->
+                        <div class="contact-us__map-container" data-map='{"zoom":16,
+                                                             "marks":[{
+                                                                     "poi_latitude":"51.347454",
+                                                                     "poi_longitude":"4.460603"
+                                                                     }]
+                    }'></div>
+                        <!--/contact-us__map-container-->
+
                         <!--contact-us__map-address-->
                         <div class="contact-us__map-address">
 
@@ -192,11 +201,30 @@
                     <div class="contact-us__info-wrap">
 
                         <!--contact-us__gallery-->
-                        <div class="contact-us__gallery"></div>
+                        <div class="contact-us__gallery">
+
+                            <!--swiper-container-->
+                            <div class="swiper-container">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image: url('pic/contact-gallery_pic.jpg')"></div>
+                                    <div class="swiper-slide" style="background-image: url('pic/contact-gallery_pic-2.jpg')"></div>
+                                    <div class="swiper-slide" style="background-image: url('pic/contact-gallery_pic.jpg')"></div>
+                                    <div class="swiper-slide" style="background-image: url('pic/contact-gallery_pic-2.jpg')"></div>
+                                </div>
+
+                            </div>
+                            <!--/swiper-container-->
+
+                            <!--swiper-pagination-->
+                            <div class="swiper-pagination"></div>
+                            <!--/swiper-pagination-->
+
+                        </div>
                         <!--/contact-us__gallery-->
 
                         <!--contact-us__contacts-->
-                        <div class="contact-us__contacts">
+                        <div class="contact-us__contacts" style="background-image: url('pic/contacts-pic.jpg')">
 
                             <!--contact-us__contacts-wrap-->
                             <div class="contact-us__contacts-wrap">
@@ -221,85 +249,91 @@
                 <!--/contact-us__info-->
 
                 <!--contact-us__form-->
-                <form action="#" class="contact-us__form">
+                <form action="#" class="contact-us__form validation-form">
 
                     <!--site__title-->
                     <h2 class="site__title">Mail us</h2>
                     <!--/site__title-->
 
-                    <div>
+                    <!--contact-us__form-row-->
+                    <div class="contact-us__form-row">
 
-                        <!--contact-us__form-row-->
-                        <div class="contact-us__form-row">
+                        <!--contact-us__form-col-->
+                        <div class="contact-us__form-col">
 
-                            <!--contact-us__form-col-->
-                            <div class="contact-us__form-col">
+                            <!--contact-us__form-required-->
+                            <fieldset class="contact-us__form-required">
 
-                                <div>
+                                <input type="text" name="first-name" data-required placeholder="First Name" autocomplete="off">
 
-                                    <input type="text" name="first-name" placeholder="First Name">
+                            </fieldset>
+                            <!--/contact-us__form-required-->
 
-                                </div>
+                            <!--contact-us__form-required-->
+                            <fieldset class="contact-us__form-required">
 
-                                <div>
+                                <input type="email" name="email" data-required placeholder="Email" autocomplete="off">
 
-                                    <input type="email" name="email" placeholder="Email">
-
-                                </div>
-
-                            </div>
-                            <!--/contact-us__form-col-->
-
-                            <!--contact-us__form-col-->
-                            <div class="contact-us__form-col">
-
-                                <div>
-
-                                    <input type="text" name="last-name" placeholder="Last Name">
-
-                                </div>
-
-                                <div>
-
-                                    <input type="tel" name="phone" placeholder="Phone">
-
-                                </div>
-
-                            </div>
-                            <!--/contact-us__form-col-->
+                            </fieldset>
+                            <!--/contact-us__form-required-->
 
                         </div>
-                        <!--/contact-us__form-row-->
+                        <!--/contact-us__form-col-->
 
-                        <!--contact-us__form-row-->
-                        <div class="contact-us__form-row">
+                        <!--contact-us__form-col-->
+                        <div class="contact-us__form-col">
 
-                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                            <!--contact-us__form-required-->
+                            <fieldset class="contact-us__form-required">
 
-                        </div>
-                        <!--/contact-us__form-row-->
+                                <input type="text" name="last-name" data-required placeholder="Last Name" autocomplete="off">
 
-                        <!--contact-us__form-row-->
-                        <div class="contact-us__form-row">
+                            </fieldset>
+                            <!--/contact-us__form-required-->
 
-                            <!--contact-us__form-note-->
-                            <span class="contact-us__form-note">
+                            <!--contact-us__form-required-->
+                            <fieldset class="contact-us__form-required">
 
-                                All fileds marked with <mark>*</mark> are mandatory
+                                <input type="tel" name="phone" data-required placeholder="Phone" autocomplete="off">
 
-                            </span>
-                            <!--/contact-us__form-note-->
-
-                            <!--btn-->
-                            <button class="btn">
-                                <span>Contacteer Ons</span>
-                            </button>
-                            <!--/btn-->
+                            </fieldset>
+                            <!--/contact-us__form-required-->
 
                         </div>
-                        <!--/contact-us__form-row-->
+                        <!--/contact-us__form-col-->
 
                     </div>
+                    <!--/contact-us__form-row-->
+
+                    <!--contact-us__form-row-->
+                    <div class="contact-us__form-row">
+
+                        <fieldset>
+                            <textarea name="message" id="message" placeholder="Your Message" autocomplete="off"></textarea>
+                        </fieldset>
+
+                    </div>
+                    <!--/contact-us__form-row-->
+
+                    <!--contact-us__form-row-->
+                    <div class="contact-us__form-row contact-us__form-row_footer">
+
+                        <!--contact-us__form-note-->
+                        <span class="contact-us__form-note">
+
+                            All fileds marked with <mark>*</mark> are mandatory
+
+                        </span>
+                        <!--/contact-us__form-note-->
+
+                        <!--btn-->
+                        <button type="submit" class="btn">
+                            <span>Contacteer Ons</span>
+                        </button>
+                        <!--/btn-->
+
+                    </div>
+                    <!--/contact-us__form-row-->
 
                 </form>
                 <!--/contact-us__form-->
