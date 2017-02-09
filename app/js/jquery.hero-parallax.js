@@ -40,15 +40,6 @@
                 console.log(koof);
 
             },
-            // _checkScroll = function ( elem ) {
-            //
-            //     var scrolled = elem.scrollTop();
-            //
-            //     _obj.css({
-            //         'top': 0 - ( scrolled * .25 )+'px'
-            //     });
-            //
-            // },
             _init = function () {
                 _obj[0].list = _self;
                 _onEvents();
