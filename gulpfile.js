@@ -21,7 +21,8 @@ var paths = {
             dist: 'index.min.js',
             contains: [
                 'app/js/jquery.main.js',
-                'app/js/jquery.popup.js'
+                'app/js/jquery.popup.js',
+                'app/js/jquery.hero-parallax.js'
             ]
         },
         {
@@ -50,7 +51,8 @@ var paths = {
             dist: 'realisations.min.js',
             contains: [
                 'app/js/jquery.main.js',
-                'app/js/jquery.more-projects.js'
+                'app/js/jquery.more-projects.js',
+                'app/js/jquery.hero-parallax.js'
             ]
         },
         {

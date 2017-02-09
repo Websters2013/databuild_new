@@ -162,13 +162,13 @@
     }
   }
   &__hero {
+    overflow: hidden;
     position: relative;
     padding: 28.85% 15px 27.1%;
-    background-size: cover;
-    background-position: center;
     text-align: center;
   }
   &__hero-title {
+    position: relative;
     margin-bottom: 6px;
     font-size: 30px;
     color: $main-white-color;
@@ -176,6 +176,7 @@
     @include main-font4();
   }
   &__hero-text {
+    position: relative;
     display: block;
     margin-bottom: 30px;
     font-size: 20px;
@@ -232,8 +233,16 @@
       }
     }
   }
+  &__hero-pic {
+    @include absolutePosition();
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+  }
 
   &__hero-inner {
+    overflow: hidden;
+    position: relative;
     padding: 40px 15px;
     text-align: center;
     color: $main-black-color;

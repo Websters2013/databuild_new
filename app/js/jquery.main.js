@@ -28,7 +28,7 @@
             _mouseleaveTimeout;
 
         //private methods
-        var _addEvents = function () {
+        var _onEvents = function () {
 
                 _languagesItem.on({
                     click: function ( e ) {
@@ -85,9 +85,8 @@
                 });
 
             },
-
-            _init = function () {
-                _addEvents();
+            _constructor = function () {
+                _onEvents();
             };
 
         //public properties
@@ -95,7 +94,7 @@
         //public methods
 
 
-        _init();
+        _constructor();
     };
 
     var Menu = function( obj ) {

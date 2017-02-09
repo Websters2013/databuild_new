@@ -120,16 +120,6 @@
     }
     &__team-item {
       margin: 0 30px 33px;
-
-      &:hover {
-
-        .about-us__team-pic {
-          background-size: 105% 105%;
-        }
-      }
-    }
-    &__team-pic {
-      @include transition(background, $animation-time, .1)
     }
     &__team-name {
       font-size: 16px;
