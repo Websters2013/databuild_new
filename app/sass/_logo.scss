@@ -1,9 +1,9 @@
 .logo {
   position: absolute;
   z-index: 3;
-  top: 6px;
+  top: 5px;
   left: 15px;
-  width: 46px;
+  width: 50px;
 
   img,
   svg {
@@ -35,9 +35,9 @@
 @media (min-width: $desktop) {
 
   .logo {
-    top: 38px;
+    top: 30px;
     left: 12px;
-    //width: 194px;
+    width: 100px;
   }
 
 }
